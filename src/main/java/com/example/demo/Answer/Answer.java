@@ -1,11 +1,15 @@
 package com.example.demo.Answer;
 
 import com.example.demo.Question.Question;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -19,6 +23,7 @@ public class Answer {
     private String content;
 
     private LocalDateTime createDate;
+
     @ManyToOne
     private Question question;
 }
